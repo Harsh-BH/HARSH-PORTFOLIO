@@ -1,17 +1,16 @@
+import React from "react";
 import "./text.css";
 
 const Text = () => {
   return (
-    <div className="container">
-      <div className="title">
-        <h1>GHOST</h1>
-      </div>
-      <div className="ghost">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div className="text-container">
+      <div className="jt">
+        <div className="jt__row">
+          <span className="jt__text">Welcome to the</span>
+        </div>
+        <div className="jt__row">
+          <span className="jt__text">Page</span>
+        </div>
       </div>
     </div>
   );

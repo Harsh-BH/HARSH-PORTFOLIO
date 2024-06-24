@@ -9,13 +9,14 @@
 body {
   background: #282c34;
   font-size: 2vmin;
-  font-family: JetBrains Mono, monospace;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #e4bb68;
+  font-family: 'JetBrains Mono', monospace;
+  scroll-behavior: smooth;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  height: 200vh; /* Allow space for scrolling */
+}
+
+.App {
+  width: 100%;
 }
 
 .hero-section {
@@ -41,11 +42,7 @@ body {
 
 .hero-content {
   position: relative;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  z-index: 1;
 }
 
 .code-line {
@@ -58,7 +55,6 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  animation: move 4s infinite;
 }
 
 .greeting {
@@ -66,24 +62,6 @@ body {
   top: 8.6vmin;
   animation: white-out 5s infinite;
 }
-
-/* .closure::after {
-  content: '';
-  position: absolute;
-  height: 25vmin;
-  width: 40vmin;
-  background: #282c34;
-  transform: translate(-45vmin, -24.5vmin);
-}
-
-.closure::before {
-  content: '';
-  position: absolute;
-  height: 25vmin;
-  width: 40vmin;
-  background: #282c34;
-  transform: translate(-40vmin, 5vmin);
-} */
 
 .en {
   color: #fa8231;
@@ -105,54 +83,143 @@ body {
   animation-delay: 12s;
 }
 
-@keyframes move {
-  25% {
-    transform: translatey(-5.8vmin);
+@keyframes white-out {
+  0% {
     opacity: 1;
   }
   50% {
-    transform: translatey(-11vmin);
-    opacity:0;
+    opacity: 0;
   }
-  75% {
-    transform: translatey(-16.5vmin);
-    opacity:1;
+  100% {
+    opacity: 1;
   }
 }
 
-/* New CSS for the slide-up text area and button */
-.slide-up-textarea {
-  display: none;
-  background-color: #282c34;
-  color: #ffffff;
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-  transition: max-height 0.5s ease-out;
-}
-
-.slide-up-textarea.open {
-  display: block;
-  max-height: 100px; /* Adjust this height as needed */
-}
-
-button {
-  margin-top: 20px;
+.scroll-down {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #61dafb;
   padding: 10px 20px;
-  background-color: #61dafb;
-  border: none;
   color: #282c34;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.5rem;
   border-radius: 5px;
+  z-index: 10;
   transition: background-color 0.3s;
 }
 
-button:hover {
+.scroll-down:hover {
   background-color: #21a1f1;
 }
 
+/* .app-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+} */
+
+.reset-button {
+  position: absolute;
+ 
+  font-size: 1.2rem;
+  background-color: #7442e8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 20em; /* Adjust the space between the button and the cards */
+  margin-top: 5em;
+  
+}
+
+.reset-btn {
+  position: absolute;
+  transition: all .15s linear 0s;
+  font-size: 1.2rem;
+  background-color: #7442e8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  /* font-family: arial; */
+  letter-spacing: 1px;
+  box-shadow: -6px 6px 0 #404040;
+  text-decoration: none;
+  transform: rotateY(0deg); /* Fixes the mirrored content */
+  transition: background-color 0.3s;
+  margin-left: 20em; /* Adjust the space between the button and the cards */
+  margin-top: 5em;
+  display: inline-block;
+
+}
+
+.reset-btn:hover {
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px 0 #404040;
+}
+
+.reset-btn:hover::after {
+  top: 1px;
+  left: -2px;
+  width: 4px;
+  height: 4px;
+}
+
+.reset-btn:hover::before {
+  bottom: -2px;
+  right: 1px;
+  width: 4px;
+  height: 4px;
+}
+
+.reset-btn::after {
+  transition: all .15s linear 0s;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #404040;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.reset-btn::before {
+  transition: all .15s linear 0s;
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #404040;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+
+.cards-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px; /* Move cards towards the right */
+}
+
+.cards {
+  position: relative;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
