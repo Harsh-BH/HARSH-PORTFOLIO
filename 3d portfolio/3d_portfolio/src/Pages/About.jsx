@@ -1,147 +1,78 @@
-import React, { Suspense, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+import React from "react";
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
 
-import CTA from "../components/CTA";
-import { experiences, skills } from "../constants";
-import Keyboard from "../models/Keyboard";
+import { styles } from "../styles"; // Importing styles from your styles.js file
+import { services } from "../constants";
+import { SectionWrapper } from "../hoc";
+import { fadeIn, textVariant } from "../utils/motion";
+import Navbar from "../components/Navbar";
+import ComputersCanvas from "../components/Canvas/Computers";
+import Hero from "../components/Hero";
+import Experience from "../components/Experience";
+import Tech from "../components/Tech";
+import StarsCanvas from "../components/Canvas/Stars";
 
-import backgroundImage from "../Pics/cd78e4094d4fd4f52c48f819cc38ad94.jpg";
+const ServiceCard = ({ index, title, icon }) => (
+  <Tilt className="xs:w-[250px] w-full">
+    <motion.div
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+    >
+      <div
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+      >
+        <img
+          src={icon}
+          alt="web-development"
+          className="w-16 h-16 object-contain"
+        />
 
-const Loader = () => <div>Loading...</div>;
+        <h3 className="text-white text-[20px] font-bold text-center">
+          {title}
+        </h3>
+      </div>
+    </motion.div>
+  </Tilt>
+);
 
 const About = () => {
-  const [currentAnimation, setCurrentAnimation] = useState("idle");
-
   return (
-    <section className="max-container">
-      <h1 className="head-text align">
-        Hello, I'm{" "}
-        <span className="blue-gradient_text font-semibold drop-shadow">
-          Harsh Bhatt
-        </span>{" "}
-        👋
-      </h1>
+    <>
+      <div>
+        <StarsCanvas />
 
-      <div className="mt-5 flex flex-col gap-3 text-slate-500">
-        <p>
-          Tech enthusiast based in India, specializing in technical education
-          through hands-on learning and building applications.
-        </p>
-      </div>
+        <Hero />
 
-      <div className="py-10 flex flex-row">
-        <div className="flex-1">
-          <h3 className="subhead-text">My Skills</h3>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
 
-          <div className="mt-16 flex flex-wrap gap-12">
-            {skills.map((skill) => (
-              <div className="block-container w-20 h-20" key={skill.name}>
-                <div className="btn-back rounded-xl" />
-                <div className="btn-front rounded-xl flex justify-center items-center">
-                  <img
-                    src={skill.imageUrl}
-                    alt={skill.name}
-                    className="w-1/2 h-1/2 object-contain"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+        <motion.p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+          I'm a skilled software developer with experience in TypeScript and
+          JavaScript, and expertise in frameworks like React, Node.js, and
+          Three.js. I'm a quick learner and collaborate closely with clients to
+          create efficient, scalable, and user-friendly solutions that solve
+          real-world problems. Let's work together to bring your ideas to life!
+        </motion.p>
+
+        <div>
+          <Experience />
+          <Tech />
         </div>
 
-        <div className="flex-1 h-35 max-w-full">
-          <Suspense fallback={<Loader />}>
-            <Canvas>
-              <directionalLight position={[0, 0, 1]} intensity={2.5} />
-              <ambientLight intensity={1} />
-              <pointLight position={[5, 10, 0]} intensity={2} />
-              <spotLight
-                position={[10, 10, 10]}
-                angle={0.15}
-                penumbra={1}
-                intensity={2}
-              />
-              <Keyboard
-                currentAnimation={currentAnimation}
-                position={[-0.2, -1.5, 1]}
-                rotation={[13.3, 0, 0]}
-                scale={[2, 2, 2]}
-              />
-            </Canvas>
-          </Suspense>
+        <div className="mt-20 flex flex-wrap gap-10">
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
         </div>
       </div>
-
-      <div className="py-16">
-        <h3 className="subhead-text">Work Experience.</h3>
-        <div className="mt-5 flex flex-col gap-3 text-slate-500">
-          <p>
-            I've worked with all sorts of companies, leveling up my skills and
-            teaming up with smart people. Here's the rundown:
-          </p>
-        </div>
-
-        <div className="mt-12 flex">
-          <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <VerticalTimelineElement
-                key={experience.company_name}
-                date={experience.date}
-                iconStyle={{ background: experience.iconBg }}
-                icon={
-                  <div className="flex justify-center items-center w-full h-full">
-                    <img
-                      src={experience.icon}
-                      alt={experience.company_name}
-                      className="w-[60%] h-[60%] object-contain"
-                    />
-                  </div>
-                }
-                contentStyle={{
-                  borderBottom: "8px",
-                  borderStyle: "solid",
-                  borderBottomColor: experience.iconBg,
-                  boxShadow: "none",
-                }}
-              >
-                <div>
-                  <h3 className="text-black text-xl font-poppins font-semibold">
-                    {experience.title}
-                  </h3>
-                  <p
-                    className="text-black-500 font-medium text-base"
-                    style={{ margin: 0 }}
-                  >
-                    {experience.company_name}
-                  </p>
-                </div>
-
-                <ul className="my-5 list-disc ml-5 space-y-2">
-                  {experience.points.map((point, index) => (
-                    <li
-                      key={`experience-point-${index}`}
-                      className="text-black-500/50 font-normal pl-1 text-sm"
-                    >
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </VerticalTimelineElement>
-            ))}
-          </VerticalTimeline>
-        </div>
-      </div>
-
-      <hr className="border-slate-200" />
-
-      <CTA />
-    </section>
+    </>
   );
 };
 
-export default About;
+export default SectionWrapper(About, "about");

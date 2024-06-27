@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useFrame, useRef, useEffect, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import scene from "../assets/3d/keyboard.glb";
 
@@ -15,6 +15,9 @@ const Keyboard = ({ currentAnimation, ...props }) => {
     }
   }, [actions, currentAnimation]);
 
+  useEffect(() => {
+    group.current.rotation.y += 0.02;
+  });
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>

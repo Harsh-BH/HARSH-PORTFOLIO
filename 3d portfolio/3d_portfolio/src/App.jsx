@@ -4,7 +4,7 @@ import { Home, About, Projects, Contact } from "./Pages";
 
 export default function App() {
   return (
-    <main className="bg-black-500">
+    <main>
       <Router>
         <Navbar />
         <Routes>
