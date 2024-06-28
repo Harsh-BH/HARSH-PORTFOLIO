@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, starbucks, tesla, RH } from "../assets/images";
 import {
   car,
   contact,
@@ -273,11 +273,11 @@ export const services = [
 
 export const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Web Developer",
+    company_name: "Renew Heat",
+    icon: RH,
     iconBg: "#accbe1",
-    date: "March 2020 - April 2021",
+    date: "March 2024 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
