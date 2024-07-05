@@ -154,49 +154,6 @@ export const projects = [
     source_code_link:
       "https://github.com/Harsh-BH/Customer-Segmentation-and-Recommendation",
   },
-
-  {
-    name: "Customer Segmentation and Recommendation",
-    description:
-      "This project leverages machine learning techniques to perform customer segmentation in the finance and stock market sectors. By analyzing customer behavior and transaction data, the project identifies distinct customer groups to enable targeted marketing and personalized financial services.",
-    tags: [
-      {
-        name: "Reactjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Pandas",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Numpy",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Sci-kit Learn",
-        color: "green-text-gradient",
-      },
-      {
-        name: "MatplotLib",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Seaborn",
-        color: "green-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link:
-      "https://github.com/Harsh-BH/Customer-Segmentation-and-Recommendation",
-  },
 ];
 
 export const technologies = [
