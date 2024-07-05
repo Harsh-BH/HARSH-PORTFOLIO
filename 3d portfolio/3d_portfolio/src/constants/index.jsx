@@ -1,4 +1,13 @@
-import { meta, shopify, starbucks, tesla, RH } from "../assets/images";
+import {
+  meta,
+  shopify,
+  starbucks,
+  tesla,
+  RH,
+  quant_logo,
+  spark4ai_logo,
+  blockchain_logo,
+} from "../assets/images";
 import {
   car,
   contact,
@@ -330,8 +339,8 @@ export const experiences = [
   {
     title: "Quant Trainee",
     company_name: "Quant Club (IIT Kharagpur)",
-    icon: tesla,
-    iconBg: "#fbc3bc",
+    icon: quant_logo,
+    iconBg: "#000000",
     date: "Jan 2021 - Feb 2022",
     points: [
       "As a Quant Trainee at IIT Kharagpur, you engage in advanced quantitative analysis, leveraging mathematical models, statistical techniques, and computational algorithms to analyze financial data and market trends.",
@@ -342,8 +351,8 @@ export const experiences = [
   {
     title: "AI Geek",
     company_name: "Spark4AI (IIT Kharagpur)",
-    icon: shopify,
-    iconBg: "#b7e4c7",
+    icon: spark4ai_logo,
+    iconBg: "#000000",
     date: "Jan 2022 - Jan 2023",
     points: [
       " As an AI Geek at Sparrk4 AI Club, you work on innovative AI projects, applying cutting-edge machine learning and deep learning techniques to solve real-world problems. This includes developing intelligent applications and exploring new AI methodologies.",
@@ -355,8 +364,8 @@ export const experiences = [
   {
     title: "Member",
     company_name: "Kharagur Blockchain Society (IIT Kharagpur)",
-    icon: meta,
-    iconBg: "#a2d2ff",
+    icon: blockchain_logo,
+    iconBg: "#000000",
     date: "Jan 2023 - Present",
     points: [
       "As a Member of the Blockchain Society at IIT Kharagpur, you engage in development of blockchain technology. This includes exploring decentralized applications (dApps), smart contracts, and various blockchain platforms such as Ethereum and Hyperledger.",
