@@ -1,10 +1,10 @@
 import React from "react";
-import RenderContext from "three/examples/jsm/renderers/common/RenderContext.js";
 import { Link } from "react-router-dom";
 import { arrow } from "../assets/icons";
+import "./Homeinfo.css"; // Assuming you have a CSS file for styling
 
 const InfoBox = ({ text, link, btnText }) => (
-  <div className="info-box">
+  <div className="info-box card">
     <p className="font-medium sm:text-xl text-center"> {text}</p>
     <Link to={link} className="neo-brutalism-white neo-btn">
       {btnText}
@@ -15,18 +15,14 @@ const InfoBox = ({ text, link, btnText }) => (
 
 const RenderContent = {
   1: (
-    <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
-      Hi, I am <span className="font-semibold">Harsh Bhatt</span>👋
-      <br />A wdinwfnwfn from India
-    </h1>
+    <div className="card">
+      <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 mx-5">
+        Hi, I am <span className="font-semibold">Harsh Bhatt</span>👋
+        <br /> A Full-Stack Data Scientist
+      </h1>
+    </div>
   ),
-  2: (
-    <InfoBox
-      text="Transforming data into intelligence, one algorithm at a time."
-      link="/about"
-      btnText="Learn more"
-    />
-  ),
+  2: <InfoBox text="Know About Me" link="/about" btnText="Learn more" />,
   3: (
     <InfoBox
       text="Transforming data into intelligence, one algorithm at a time."
@@ -36,7 +32,7 @@ const RenderContent = {
   ),
   4: (
     <InfoBox
-      text="Transforming data into intelligence, one algorithm at a time."
+      text="Just a Ring Away from Transforming Your Ideas into Reality!"
       link="/contact"
       btnText="Let's Talk"
     />
@@ -44,7 +40,9 @@ const RenderContent = {
 };
 
 const Homeinfo = ({ currentStage }) => {
-  return RenderContent[currentStage] || null;
+  return (
+    <div className="cards-container">{RenderContent[currentStage] || null}</div>
+  );
 };
 
 export default Homeinfo;

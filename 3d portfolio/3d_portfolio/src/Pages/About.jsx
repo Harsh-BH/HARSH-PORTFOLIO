@@ -54,9 +54,10 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
 
         <motion.p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Experienced tech professional with a diverse background in machine
-          learning, artificial intelligence, frontend development, blockchain,
-          and quantitative analysis. Proficient in designing and implementing AI
+          Experienced tech professional and second-year undergraduate student at
+          IIT Kharagpur with a diverse background in machine learning,
+          artificial intelligence, frontend development, blockchain, and
+          quantitative analysis. Proficient in designing and implementing AI
           algorithms to drive insightful data analysis and predictive modeling.
           Skilled in creating dynamic and user-friendly web interfaces using
           modern frontend frameworks. Adept at developing decentralized
