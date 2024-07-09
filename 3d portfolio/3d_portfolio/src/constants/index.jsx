@@ -48,6 +48,9 @@ import {
   carrent,
   jobit,
   tripguide,
+  Customer_Segmentation_and_Recommendation,
+  An_illustration_of_sentiment_analysis_in_finance_a,
+  An_illustration_of_a_secure_web_based_examination,
 } from "../assets";
 
 export const navLinks = [
@@ -84,7 +87,7 @@ export const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: carrent,
+    image: An_illustration_of_a_secure_web_based_examination,
     source_code_link: "https://github.com/Harsh-BH/Examination-system",
   },
   {
@@ -117,7 +120,7 @@ export const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: An_illustration_of_sentiment_analysis_in_finance_a,
     source_code_link:
       "https://github.com/Harsh-BH/Sentiment-Analysis-in-Finance-and-Stocks",
   },
@@ -159,7 +162,259 @@ export const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: tripguide,
+    image: Customer_Segmentation_and_Recommendation,
+    source_code_link:
+      "https://github.com/Harsh-BH/Customer-Segmentation-and-Recommendation",
+  },
+  {
+    name: "Customer Segmentation and Recommendation",
+    description:
+      "This project leverages machine learning techniques to perform customer segmentation in the finance and stock market sectors. By analyzing customer behavior and transaction data, the project identifies distinct customer groups to enable targeted marketing and personalized financial services.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Pandas",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Numpy",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Sci-kit Learn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MatplotLib",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Seaborn",
+        color: "green-text-gradient",
+      },
+    ],
+    image: Customer_Segmentation_and_Recommendation,
+    source_code_link:
+      "https://github.com/Harsh-BH/Customer-Segmentation-and-Recommendation",
+  },
+  {
+    name: "Customer Segmentation and Recommendation",
+    description:
+      "This project leverages machine learning techniques to perform customer segmentation in the finance and stock market sectors. By analyzing customer behavior and transaction data, the project identifies distinct customer groups to enable targeted marketing and personalized financial services.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Pandas",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Numpy",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Sci-kit Learn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MatplotLib",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Seaborn",
+        color: "green-text-gradient",
+      },
+    ],
+    image: Customer_Segmentation_and_Recommendation,
+    source_code_link:
+      "https://github.com/Harsh-BH/Customer-Segmentation-and-Recommendation",
+  },
+  {
+    name: "Customer Segmentation and Recommendation",
+    description:
+      "This project leverages machine learning techniques to perform customer segmentation in the finance and stock market sectors. By analyzing customer behavior and transaction data, the project identifies distinct customer groups to enable targeted marketing and personalized financial services.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Pandas",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Numpy",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Sci-kit Learn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MatplotLib",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Seaborn",
+        color: "green-text-gradient",
+      },
+    ],
+    image: Customer_Segmentation_and_Recommendation,
+    source_code_link:
+      "https://github.com/Harsh-BH/Customer-Segmentation-and-Recommendation",
+  },
+  {
+    name: "Customer Segmentation and Recommendation",
+    description:
+      "This project leverages machine learning techniques to perform customer segmentation in the finance and stock market sectors. By analyzing customer behavior and transaction data, the project identifies distinct customer groups to enable targeted marketing and personalized financial services.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Pandas",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Numpy",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Sci-kit Learn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MatplotLib",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Seaborn",
+        color: "green-text-gradient",
+      },
+    ],
+    image: Customer_Segmentation_and_Recommendation,
+    source_code_link:
+      "https://github.com/Harsh-BH/Customer-Segmentation-and-Recommendation",
+  },
+  {
+    name: "Customer Segmentation and Recommendation",
+    description:
+      "This project leverages machine learning techniques to perform customer segmentation in the finance and stock market sectors. By analyzing customer behavior and transaction data, the project identifies distinct customer groups to enable targeted marketing and personalized financial services.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Pandas",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Numpy",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Sci-kit Learn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MatplotLib",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Seaborn",
+        color: "green-text-gradient",
+      },
+    ],
+    image: Customer_Segmentation_and_Recommendation,
+    source_code_link:
+      "https://github.com/Harsh-BH/Customer-Segmentation-and-Recommendation",
+  },
+  {
+    name: "Customer Segmentation and Recommendation",
+    description:
+      "This project leverages machine learning techniques to perform customer segmentation in the finance and stock market sectors. By analyzing customer behavior and transaction data, the project identifies distinct customer groups to enable targeted marketing and personalized financial services.",
+    tags: [
+      {
+        name: "Reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Pandas",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Numpy",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Sci-kit Learn",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MatplotLib",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Seaborn",
+        color: "green-text-gradient",
+      },
+    ],
+    image: Customer_Segmentation_and_Recommendation,
     source_code_link:
       "https://github.com/Harsh-BH/Customer-Segmentation-and-Recommendation",
   },

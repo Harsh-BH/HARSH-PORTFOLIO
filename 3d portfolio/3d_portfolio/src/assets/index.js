@@ -29,6 +29,11 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import Customer_Segmentation_and_Recommendation from "./Customer_Segmentation_and_Recommendation.png";
+
+import An_illustration_of_sentiment_analysis_in_finance_a from "./An_illustration_of_sentiment_analysis_in_finance_a.png";
+
+import An_illustration_of_a_secure_web_based_examination from "./An_illustration_of_a_secure_web_based_examination.png";
 
 export {
   logo,
@@ -59,4 +64,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  Customer_Segmentation_and_Recommendation,
+  An_illustration_of_sentiment_analysis_in_finance_a,
+  An_illustration_of_a_secure_web_based_examination,
 };
