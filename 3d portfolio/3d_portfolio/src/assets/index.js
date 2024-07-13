@@ -35,6 +35,8 @@ import An_illustration_of_sentiment_analysis_in_finance_a from "./An_illustratio
 
 import An_illustration_of_a_secure_web_based_examination from "./An_illustration_of_a_secure_web_based_examination.png";
 
+import music_player from "./music_player.png";
+
 export {
   logo,
   backend,
@@ -67,4 +69,5 @@ export {
   Customer_Segmentation_and_Recommendation,
   An_illustration_of_sentiment_analysis_in_finance_a,
   An_illustration_of_a_secure_web_based_examination,
+  music_player,
 };
